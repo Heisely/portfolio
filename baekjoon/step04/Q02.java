@@ -8,7 +8,7 @@ public class Q02 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		while (true) {
+		while (scan.hasNext()) {
 			System.out.print("한 자리 정수를 두 개 입력하세요.(띄어쓰기로 구분)> ");
 			int a = scan.nextInt();
 			int b = scan.nextInt();
