@@ -24,7 +24,7 @@ public class Ex08 {
 			ball[i] = ball[j];
 			ball[j] = tmp;
 		}
-
+		
 		// 배열 ball의 앞에서 6개의 요소를 출력
 		for (int i = 0; i < 6; i++) {
 			System.out.println("ball[" + i + "]=" + ball[i]);
