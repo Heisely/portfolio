@@ -20,5 +20,10 @@ public class Q10 {
 		System.out.println("((" + a + "%" + c + ")+(" + b + "%" + c + "))%" + c + " = " + ((a % c) + (b % c)) % c);
 		System.out.print("(" + a + "+" + b + ")%" + c + " = ((" + a + "%" + c + ")+(" + b + "%" + c + "))%" + c + " ?? ");
 		System.out.printf("%b\n", (a + b) % c == ((a % c) + (b % c)) % c);
+		
+		System.out.println("(" + a + "*" + b + ")%" + c + " = " + (a * b) % c);
+		System.out.println("((" + a + "%" + c + ")*(" + b + "%" + c + "))%" + c + " = " + ((a % c) * (b % c)) % c);
+		System.out.print("(" + a + "*" + b + ")%" + c + " = ((" + a + "%" + c + ")*(" + b + "%" + c + "))%" + c + " ?? ");
+		System.out.printf("%b\n", (a * b) % c == ((a % c) * (b % c)) % c);
 	}
 }
