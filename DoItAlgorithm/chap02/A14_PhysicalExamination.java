@@ -36,8 +36,11 @@ public class A14_PhysicalExamination {
 
 		dist[i] = 0;
 		for (i = 0; i < dat.length; i++) {
-			if (dat[i].vision >= 0.0 && dat[i].vision <= VMAX / 10.0) {
+			if (0.0 <= dat[i].vision && dat[i].vision <= VMAX / 10.0) {
 				dist[(int) (dat[i].vision * 10)]++;
+				// 시력이 0.5이면 dat[i].vision*10 = 5.0
+				// (int)(dat[i].vision*10) = 5;
+				// dist[5] = 0; >> dist[5] = 1;
 			}
 		}
 	}

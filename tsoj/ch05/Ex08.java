@@ -1,5 +1,7 @@
 package tsoj.ch05;
 
+import java.util.Arrays;
+
 // 1. 배열(Array)
 // ArrayEx8. 배열의 활용(4) - 섞기(Shuffle)(2)
 public class Ex08 {
@@ -24,10 +26,25 @@ public class Ex08 {
 			ball[i] = ball[j];
 			ball[j] = tmp;
 		}
-		
+
 		// 배열 ball의 앞에서 6개의 요소를 출력
 		for (int i = 0; i < 6; i++) {
 			System.out.println("ball[" + i + "]=" + ball[i]);
+		}
+
+		// 로또처럼 5줄 뽑기
+		for (int k = 0; k < 6; k++) {
+			for (int i = 0; i < 6; i++) {
+				j = (int) (Math.random() * 45);
+				tmp = ball[i];
+				ball[i] = ball[j];
+				ball[j] = tmp;
+			}
+
+			for (int i = 0; i < 6; i++) {
+				System.out.print(ball[i] + " ");
+			}
+			System.out.println();
 		}
 	}
 }
